@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: network
+  namespace: NAMESPACE
+  labels:
+    app: network
+spec:
+  containers:
+  - name: network
+    image: ghcr.io/oleksandrfrolov95/network-utils/network-utils:1.0
+    command: ["/bin/sleep", "3650d"]
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
