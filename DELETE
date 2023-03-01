@@ -1,0 +1,17 @@
+nmapConfig:
+  services:
+    - name: SERVICE
+      protocol:
+        - "tcp"
+        - "udp"
+      additionalParams:
+        - "-v"
+        - "-p T:0-65535"
+        - "--stats-every 30"
+  enableUnicornscan:
+    additionalParams:
+      - "-r300"
+      - "-v"
+  reportDir : "nmap_reports"
+  enableServiceVersionDetection: true
+  privilegedMode: true
